@@ -45,6 +45,7 @@ This original piece was written by Le Wagon alumni: [Adrien Pelegri (Batch #30)]
   - [WeChat IDE](#wechat-ide)
       - [What's this?](#whats-this)
       - [Quick tutorial](#quick-tutorial)
+    - [Start the IDE](#start-the-ide)
       - [Project creation](#project-creation)
   - [Dig into the "quickstart" project](#dig-into-the-%22quickstart%22-project)
     - [Root directory](#root-directory)
@@ -221,6 +222,22 @@ The same thing is true for TypeScript (if you make use of it); it can be solved 
 ```bash
 ln -s /Users/YOURUSER/.nvm/versions/node/YOURNODEVERSION/bin/tsc /usr/local/bin/tsc
 ```
+
+### Start the IDE
+
+The IDE we used (in February 2019) luckily supported english at most of the places.
+
+If you are on MacOS you can hit Command and Space to open teh Spotlight search and start typing "wechat" - after a short time there should be the symbol of the IDe coming up (named in chinese characters). See the screenshot below (the red underlined thing is the IDE)
+
+![spotlight search](assets/find_wechat_ide_macos.png)
+
+After that you need to scan a QR-Code to log in:
+
+![login](assets/wechat_ide_login.png)
+
+Do this with your WeChat client on your mobile:
+
+tbw...
 
 #### Project creation
 
