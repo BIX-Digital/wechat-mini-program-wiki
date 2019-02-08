@@ -32,55 +32,65 @@ This original piece was written by Le Wagon alumni: [Adrien Pelegri (Batch #30)]
 
 ## Summary
 
-- [Registration process](#registration-process)
-- [WeChat IDE](#wechat-ide)
-  - [What's this?](whats-this)
-  - [Quick tutorial](#quick-tutorial)
-  - [Project creation](#project-creation)
-- [Dig into the "quickstart" project](#dig-into-the-quickstart-project)
-  - [Root directory](#root-directory)
-  - [Quickstart project pages](#quickstart-project-pages)
-  - [Take-away from the "quickstart" project](#take-away-from-the-quickstart-project)
-- [The life cycle of your MP](#the-life-cycle-of-your-mp)
+- [WeChat Mini-programs Wiki](#wechat-mini-programs-wiki)
+    - [PREFACE](#preface)
+      - [Yes, it's not perfect...](#yes-its-not-perfect)
+      - [Why this Wiki](#why-this-wiki)
+    - [Get in touch](#get-in-touch)
+    - [Contribute to this Wiki](#contribute-to-this-wiki)
+    - [Acknowledgements](#acknowledgements)
+    - [Contributors](#contributors)
+  - [Summary](#summary)
+  - [Registration process](#registration-process)
+  - [WeChat IDE](#wechat-ide)
+      - [What's this?](#whats-this)
+      - [Quick tutorial](#quick-tutorial)
+      - [Project creation](#project-creation)
+  - [Dig into the "quickstart" project](#dig-into-the-%22quickstart%22-project)
+    - [Root directory](#root-directory)
+    - [WeChat "quickstart" pages](#wechat-%22quickstart%22-pages)
+    - [Take-away from the "quickstart" project](#take-away-from-the-%22quickstart%22-project)
+  - [The life cycle of your MP](#the-life-cycle-of-your-mp)
     - [Application life cycle](#application-life-cycle)
     - [Page life cycle](#page-life-cycle)
     - [App life cycle affects page life cycle](#app-life-cycle-affects-page-life-cycle)
-- [Core setup of your MP](#core-setup-of-your-mp)
+  - [Core setup of your MP](#core-setup-of-your-mp)
     - [Routing](#routing)
     - [TabBar](#tabbar)
     - [Window](#window)
-     - [Enable pull down refresh](#enble-pull-down-refresh)
-     - [Navbar, dynamic title](#navbar-dynamic-title)
+      - [Enable pull down refresh](#enable-pull-down-refresh)
+      - [Navbar dynamic title](#navbar-dynamic-title)
     - [Network timeout](#network-timeout)
     - [Debug](#debug)
-- [Create dynamic pages](#create-dynamic-pages)
+  - [Create dynamic pages](#create-dynamic-pages)
     - [WXML - HTML, what's the deal?](#wxml---html-whats-the-deal)
     - [Data binding](#data-binding)
     - [List loop rendering: wx:for](#list-loop-rendering-wxfor)
     - [Conditional rendering: wx:if, wx:elif, wx:else](#conditional-rendering-wxif-wxelif-wxelse)
     - [Template](#template)
-     - [Import a template](#import-a-template)
-     - [Define a template](#define-a-template)
+      - [Define a template](#define-a-template)
+      - [Import a template](#import-a-template)
     - [Events](#events)
-     - [Event handler](#event-handler)
-     - [Event binding](#event-binding)
-     - [Event types classification](#event-types-classification)
+      - [Event handler](#event-handler)
+      - [Event binding](#event-binding)
+      - [Event types classification](#event-types-classification)
     - [Mini-program sharing](#mini-program-sharing)
-     - [Enable the forward button of the drop-down menu](#enable-the-forward-button-of-the-drop-down-menu)
-     - [Create a forward button within the current page](#create-a-forward-button-within-the-current-page)
-- [WeChat design guidelines](#wechat-design-guidelines)
-    -  [WeUI, basic front-end library ](#weui-basic-front-end-library)
-    -  [WXSS](#wxss)
-    -  [Style import](#style-import)
-    -  [Selectors supported](#selectors-supported)
-- [Built-in components](#built-in-components)
+      - [Enable the forward button of the drop-down menu](#enable-the-forward-button-of-the-drop-down-menu)
+      - [Create a forward button within the current page](#create-a-forward-button-within-the-current-page)
+  - [WeChat design guidelines](#wechat-design-guidelines)
+    - [WeUI, basic front-end library](#weui-basic-front-end-library)
+    - [WXSS](#wxss)
+      - [Size unit](#size-unit)
+      - [Style import](#style-import)
+      - [Selectors supported](#selectors-supported)
+  - [Built-in components](#built-in-components)
     - [Navigator](#navigator)
     - [Picker](#picker)
     - [Switch](#switch)
     - [Toast](#toast)
     - [Modal](#modal)
     - [Map](#map)
-- [Leancloud DB](#leancloud-db)
+  - [Leancloud DB](#leancloud-db)
     - [1. Create a form](#1-create-a-form)
     - [2. Install and initialize Leancloud](#2-install-and-initialize-leancloud)
     - [3. Create an object and encapsulate data](#3-create-an-object-and-encapsulate-data)
@@ -88,13 +98,21 @@ This original piece was written by Le Wagon alumni: [Adrien Pelegri (Batch #30)]
     - [5. Fetch data from Leancloud](#5-fetch-data-from-leancloud)
     - [Recommendations](#recommendations)
     - [Production: domain name whitelist](#production-domain-name-whitelist)
-- [WeChat API](#wechat-api)
+  - [WeChat API](#wechat-api)
     - [Get user information](#get-user-information)
     - [Data cache](#data-cache)
     - [Open the QR code scanner](#open-the-qr-code-scanner)
     - [Location-based services](#location-based-services)
     - [Image](#image)
-- [FAQ](#faq)
+    - [Network Requests](#network-requests)
+      - [Request attributes:](#request-attributes)
+  - [FAQ](#faq)
+    - [API, you can use](#api-you-can-use)
+    - [CSS, can't use `background-image:` property](#css-cant-use-background-image-property)
+    - [RPX as unit?](#rpx-as-unit)
+  - [Thanks for reading!](#thanks-for-reading)
+    - [Get in touch](#get-in-touch-1)
+    - [Contribute to this Wiki](#contribute-to-this-wiki-1)
 
 ___
 
@@ -187,6 +205,22 @@ This page is where you will find the current project details as your AppID, dire
 While you are testing your mini-program on your phone, you can enable the debugger tool directly on your device.
 
 ![project information](assets/project-information.png)
+
+**MacOS Quirks:**
+
+When using NVM you may face issues that the build fails because npm is not found. This can be solved with adding certain links:
+
+```bash
+ ln -s /Users/YOURUSER/.nvm/versions/node/YOURNODEVERSION/bin/npm /usr/local/bin/npm
+ ln -s /Users/YOURUSER/.nvm/versions/node/YOURNODEVERSION/bin/node /usr/local/bin/node
+
+```
+
+The same thing is true for TypeScript (if you make use of it); it can be solved with this comand
+
+```bash
+ln -s /Users/YOURUSER/.nvm/versions/node/YOURNODEVERSION/bin/tsc /usr/local/bin/tsc
+```
 
 #### Project creation
 
