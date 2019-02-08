@@ -206,9 +206,9 @@ While you are testing your mini-program on your phone, you can enable the debugg
 
 ![project information](assets/project-information.png)
 
-**MacOS Quirks:**
+**NVM on MacOS quirks:**
 
-When using NVM you may face issues that the build fails because npm is not found. This can be solved with adding certain links:
+When using NVM on MacOS (we did not confirm it on Windows or Linux; may also be the case) you may face issues that the build fails because npm is not found by the IDE. This can be solved with adding certain links to the system so that the IDE finds the binaries at the expected paths:
 
 ```bash
  ln -s /Users/YOURUSER/.nvm/versions/node/YOURNODEVERSION/bin/npm /usr/local/bin/npm
