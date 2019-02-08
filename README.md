@@ -229,7 +229,7 @@ ln -s /Users/YOURUSER/.nvm/versions/node/YOURNODEVERSION/bin/tsc /usr/local/bin/
 The IDE we used (in February 2019) luckily supported english at most of the places. Still it is important to know that you can not use it without an active WeChat account. So make sure you have WeChat installed and an activated account.<br/>
 It might also be important that you have someone to confirm your identity - more on this here **(TO BE WRITTEN / LINKED)**
 
-If you are on MacOS you can hit Command and Space to open teh Spotlight search and start typing "wechat" - after a short time there should be the symbol of the IDe coming up (named in chinese characters). See the screenshot below (the red underlined thing is the IDE)
+If you are on MacOS you can hit Command and Space to open the Spotlight search and start typing "wechat" - after a short time there should be the symbol of the IDe coming up (named in chinese characters). See the screenshot below (the red underlined thing is the IDE)
 
 ![spotlight search](assets/find_wechat_ide_macos.png)
 
