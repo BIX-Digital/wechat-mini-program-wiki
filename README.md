@@ -112,6 +112,7 @@ This original piece was written by Le Wagon alumni: [Adrien Pelegri (Batch #30)]
     - [API, you can use](#api-you-can-use)
     - [CSS, can't use `background-image:` property](#css-cant-use-background-image-property)
     - [RPX as unit?](#rpx-as-unit)
+    - [Chinese Basics](#chinese-basics)
   - [Thanks for reading!](#thanks-for-reading)
     - [Get in touch](#get-in-touch-1)
     - [Contribute to this Wiki](#contribute-to-this-wiki-1)
@@ -239,7 +240,7 @@ After the IDE is opening you are presented with something that looks like a spla
 
 ![login screens](assets/wechat_ide_login.png)
 
-This is the login screen. We did not find a way around it at BI X, so you need to have your WeChat on your mobile ready to use. It is in the "Discover" tab, behind the element "Scan":
+This is the login screen. We did not find a way around it at BI X, so you need to have your WeChat on your mobile ready to use. It is in the `Discover` tab, behind the element `Scan`:
 
 ![scanner screen in app](assets/find_scanner_for_ide_login.png)
 
@@ -247,7 +248,7 @@ After you have scanned the code you will get a chinese screen in your WeChat mob
 
 ![chinese confirmation dialog, version at the point in time we satrted working with it](assets/confirm_ide_login_on_mobile_original.png)
 
-According to Google Translate the green button is "confirm login" (确认登录). The Goggle Translate App with it's live-translate feature may come in handy if you want to know in detail what you confirm:
+According to Google Translate the green button is `confirm login` (确认登录). The Goggle Translate App with it's live-translate feature may come in handy if you want to know in detail what you confirm:
 
 ![confirm login screen live translated](assets/confirm_ide_login_on_mobile_translated.png)
 
@@ -2312,6 +2313,18 @@ However, to come back to `rpx` unit, **rpx advantages** are:
 - It scales according to the width of the ratio (screen width) which makes the experience more responsive.
 - It facilitates the realization of high-definition, 1 pixel line.
 - Well suported on mobile and tablet devices.
+
+### Chinese Basics
+
+Even if the IDE has lots of things already translated you will find some elments in chinese. So here is a list that may coem in handy:
+
+| chinese text | english meaning                                               | where can it be found              |
+|--------------|---------------------------------------------------------------|------------------------------------|
+| 微信          | micro-message / micro-letter (the chinese name of WeChat)     | various places                     |
+| 项目配置文件   | project configuration file                                    | project.config.json                |
+| 复制          | copy                                                          | code editor context menu           |
+| 剪切          | cut / cutting                                                 | code editor context menu           |
+
 
 ___
 
