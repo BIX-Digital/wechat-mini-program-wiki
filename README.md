@@ -45,7 +45,7 @@ This original piece was written by Le Wagon alumni: [Adrien Pelegri (Batch #30)]
   - [WeChat IDE](#wechat-ide)
       - [What's this?](#whats-this)
       - [Quick tutorial](#quick-tutorial)
-    - [Start the IDE](#start-the-ide)
+      - [Start the IDE](#start-the-ide)
       - [Project creation](#project-creation)
   - [Dig into the "quickstart" project](#dig-into-the-%22quickstart%22-project)
     - [Root directory](#root-directory)
@@ -223,21 +223,38 @@ The same thing is true for TypeScript (if you make use of it); it can be solved 
 ln -s /Users/YOURUSER/.nvm/versions/node/YOURNODEVERSION/bin/tsc /usr/local/bin/tsc
 ```
 
-### Start the IDE
+#### Start the IDE
 
-The IDE we used (in February 2019) luckily supported english at most of the places.
+The IDE we used (in February 2019) luckily supported english at most of the places. Still it is important to know that you can not use it without an active WeChat account. So make sure you have WeChat installed and an activated account.<br/>
+It might also be important that you have someone to confirm your identity - more on this here **(TO BE WRITTEN / LINKED)**
 
 If you are on MacOS you can hit Command and Space to open teh Spotlight search and start typing "wechat" - after a short time there should be the symbol of the IDe coming up (named in chinese characters). See the screenshot below (the red underlined thing is the IDE)
 
 ![spotlight search](assets/find_wechat_ide_macos.png)
 
-After that you need to scan a QR-Code to log in:
+Else you have to search the Application based in it's icon in your start menu.
 
-![login](assets/wechat_ide_login.png)
+After the IDE is opening you are presented with something that looks like a splash screen and contains a QR-Code:
 
-Do this with your WeChat client on your mobile:
+![login screens](assets/wechat_ide_login.png)
 
-tbw...
+This is the login screen. We did not find a way around it at BI X, so you need to have your WeChat on your mobile ready to use. It is in the "Discover" tab, behind the element "Scan":
+
+![scanner screen in app](assets/find_scanner_for_ide_login.png)
+
+After you have scanned the code you will get a chinese screen in your WeChat mobile app:
+
+![chinese confirmation dialog, version at the point in time we satrted working with it](assets/confirm_ide_login_on_mobile_original.png)
+
+According to Google Translate the green button is "confirm login" (确认登录). The Goggle Translate App with it's live-translate feature may come in handy if you want to know in detail what you confirm:
+
+![confirm login screen live translated](assets/confirm_ide_login_on_mobile_translated.png)
+
+After the confirm you are logged in and see the recent / available project(s) screen:
+
+![projects overview](assets/wechat_ide_project_selection_miniapp.png)
+
+From here you can create your different projects you want to work on. Have fun... ;-)
 
 #### Project creation
 
