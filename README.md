@@ -28,6 +28,7 @@ This original piece was written by Le Wagon alumni: [Adrien Pelegri (Batch #30)]
 
 - [Nathan Lee](https://github.com/kwnath)
 - [Stephane Delgado](https://github.com/stephanedelgado)
+- [Manuel Feller](https://github.com/manuelfeller)
 
 
 ## Summary
